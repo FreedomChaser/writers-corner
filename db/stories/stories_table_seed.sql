@@ -1,0 +1,1 @@
+create table stories (storyID serial primary key, userID serial REFERENCES users(userID), characterID serial REFERENCES characters(characterID), plotID serial REFERENCES plots(plotID), title VARCHAR(150))
