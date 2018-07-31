@@ -6,16 +6,23 @@ export default class CharaForm extends Component{
         super()
 
         this.state = {
+            chatacters: [
+                {
 
+                }
+            ]
         }
         this.formFunc = this.formFunc.bind(this)
     }
 
     formFunc(input, question){
-        this.setState({question: input})
+        let tempCharacter = Object.assign({}, this.state.chatacters)
+        tempCharacter[question] = input
+        this.setState({chatacters: tempCharacter})
     }
-
+    
     render(){
+        console.log(this.state)
         return(
             <div>
                 <CharaInput question='Name' formFunc={this.formFunc}/>
