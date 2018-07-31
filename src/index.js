@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import {Provider} from 'react-redux'
 import store from './components/ducks/store'
+import {HashRouter} from 'react-router-dom'
 // import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
 <Provider store={store}>
-<App />
+    <HashRouter>
+        <App/>
+    </HashRouter>
 </Provider>
 , document.getElementById('root'));
 // registerServiceWorker();

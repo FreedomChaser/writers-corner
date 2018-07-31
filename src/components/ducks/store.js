@@ -1,7 +1,5 @@
-import {createStore, combineReducers} from 'redux'
-import plotReducer from './plotReducer'
-import charaReducer from './charaReducer'
+import {createStore} from 'redux'
+import reducer from './reducer'
 
-rootReducer = combineReducers({plot: plotReducer, character: charaReducer})
 
-export default createStore(rootReducer)
+export default createStore(reducer)
